@@ -20,3 +20,11 @@ pip install slackclient
 ```
 export SLACK_BOT_TOKEN='your slack token pasted here'
 ```
+```
+(mattbott)$ export BOT_ID='bot id returned by script'
+```
+
+Setup is done, run Python file!
+```
+python mattbott.py
+```
