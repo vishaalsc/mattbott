@@ -9,6 +9,8 @@ BOT_ID = os.environ.get("BOT_ID")
 # constants
 AT_BOT = "<@" + BOT_ID + ">"
 EXAMPLE_COMMAND = "do"
+GAME_IDENTIFIER = "favourite game"
+FAV_GAME = "League of Legends"
 
 # instantiate Slack & Twilio clients
 slack_client = SlackClient(os.environ.get('SLACK_BOT_TOKEN'))
@@ -22,6 +24,9 @@ def handle_command(command, channel):
     """
     response = "Not sure what you mean. Use the *" + EXAMPLE_COMMAND + \
                "* command with numbers, delimited by spaces."
+    #mattbot tells slack what its favourite game is (but only if you're Canadian)
+    if GAME_IDENTIFIER in command:
+    	response = "My favourite game is " + FAV_GAME +"."
     if command.startswith(EXAMPLE_COMMAND):
         response = "Sure...write some more code then I can do that!"
     slack_client.api_call("chat.postMessage", channel=channel,
