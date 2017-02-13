@@ -28,3 +28,9 @@ Setup is done, run Python file!
 ```
 python mattbott.py
 ```
+
+
+--> Look into 
+ - Claudia.js, Node, Lambda, AWS
+ - Slack API
+ - Google Sheets API
