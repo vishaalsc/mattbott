@@ -12,9 +12,6 @@ virtualenv mattbott
 source mattbott/bin/activate
 ```
 ```
-source mattbott/bin/activate
-```
-```
 pip install slackclient
 ```
 ```
@@ -31,6 +28,7 @@ python mattbott.py
 
 
 --> Look into 
- - Claudia.js, Node, Lambda, AWS
+ - Claudia.js, Lambda, AWS
+ - Flask
  - Slack API
  - Google Sheets API
