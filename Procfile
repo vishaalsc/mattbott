@@ -1,1 +1,1 @@
-web: python mattbott.py
+web: gunicorn mattbott:app
