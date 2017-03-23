@@ -4,13 +4,10 @@ from slackclient import SlackClient
 from random import randint
 
 #Starterbot's ID as an environment variable
-#os.environ.get("BOT_ID")
-BOT_ID = 'U44PLAXD5'
+BOT_ID = os.environ.get("BOT_ID")
 
 #Instantiate Slack & Twilio clients
-#$(Mattbott) export SLACK_BOT_TOKEN='xoxb-140802371447-fdwO5qZTB8tv3494qCIKOp1x'
-#slack_client = SlackClient(os.environ.get('SLACK_BOT_TOKEN'))
-slack_client = SlackClient('xoxb-140802371447-fdwO5qZTB8tv3494qCIKOp1x')
+slack_client = SlackClient(os.environ.get('SLACK_BOT_TOKEN'))
 
 #constants
 AT_BOT = "<@" + BOT_ID + ">" 
@@ -98,7 +95,7 @@ def handle_command(command, channel):
                 slackPrint(response) 
                 suspend = False
         '''
-        
+
     elif START in command:
         #put in randomly generated prompts
         #= array of prompts, questions
