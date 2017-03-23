@@ -26,6 +26,8 @@ END = "bye"
 
 #command = "/anon" + str(command)
 
+#Connect script to Google sheets after, read from entries
+#Allows easier changes as well as less shitty code
 a = ["Describe last night.", 
             "I love you.", 
             "I hate you.", 
