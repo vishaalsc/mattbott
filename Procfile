@@ -1,1 +1,1 @@
-worker: python mattbott.py
+web: python mattbott.py
