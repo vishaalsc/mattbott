@@ -18,9 +18,8 @@ EXAMPLE_COMMAND = "do"
 TROLL = "favourite"
 FAV_GAME = "League of Legends"
 
-GAME_IDENTIFIER = "start"
-START = "yes"
-CONT = "again"
+GAME_IDENTIFIER = "play"
+START = "go"
 END = "bye"
 
 #command = "/anon" + str(command)
@@ -107,9 +106,6 @@ def handle_command(command, channel):
         #= let users vote
         #= command next 
         #= repeat
-        slackPrint(a[randint(0,len(a)-1)])
-
-    elif CONT in command:
         slackPrint(a[randint(0,len(a)-1)])
 
     elif END in command:
