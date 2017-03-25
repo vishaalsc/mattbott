@@ -5,9 +5,11 @@ from random import randint
 
 #Starterbot's ID as an environment variable
 BOT_ID = os.environ.get("BOT_ID")
+#U44PLAXD5 
 
 #Instantiate Slack & Twilio clients
 slack_client = SlackClient(os.environ.get('SLACK_BOT_TOKEN'))
+#xoxb-140802371447-ZBv5ZaefXqZoMHVtU87O6TWm
 
 #constants
 AT_BOT = "<@" + BOT_ID + ">" 
@@ -16,7 +18,7 @@ EXAMPLE_COMMAND = "do"
 TROLL = "favourite"
 FAV_GAME = "League of Legends"
 
-GAME_IDENTIFIER = "lets play"
+GAME_IDENTIFIER = "start"
 START = "yes"
 CONT = "again"
 END = "bye"
@@ -71,14 +73,14 @@ def handle_command(command, channel):
     elif GAME_IDENTIFIER in command:
         #suspend = True 
         response = "Okay, let's go!\n\n" + \
-                    "Welcome to _______\n" + \
+                    "Welcome to Emoji Blitz:\n" + \
                     "I'm going to give you a series of questions, statements, and prompts - \n" + \
-                    "Your job is to respond with your choice of emojis as best as you can :)\n\n" + \
+                    "Your job is to respond with your choice of message, as best as you can :)\n\n" + \
+                    "Then, score the best response amongst players by voting with hearts. \n" + \
                     "Here are some *rules*: \n" + \
-                    " - 15 sec answers\n" + \
+                    " - 20 sec answers\n" + \
                     " - Emojis\n" + \
-                    " - Single letters\n" + \
-                    " - Min 10 chars\n\n" +\
+                    " - Short language\n" +\
                     "Ready to go?"
 
         slackPrint(response)
