@@ -1,0 +1,5 @@
+#virtualenv dir
+mattbott/
+
+#dolphin
+*.directory
