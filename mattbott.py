@@ -88,7 +88,7 @@ def handle_command(command, channel):
                     " - Emojis\n" + \
                     " - Short language\n" +\
 		    "Here are some additional round rules to guide voting:\n" + \
-                    " 1. Most Narritive Answer\n" + \
+                    " 1. Most Narrative Answer\n" + \
                     " 2. Most Hilarious Answer\n" +\
 		    " 3. Most Inappropriate Answer\n" +\
 		    " 4. Most Accurate Answer\n" +\
