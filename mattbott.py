@@ -51,6 +51,13 @@ a = ["Describe last night.",
             "Can I get a ride?", 
             "How was your day?"]
 
+b = ["Most Narritive Answer",
+     "Most Hilarious Answer",
+     "Most Inappropriate Answer",
+     "Most Accurate Answer",
+     "Most Creative Answer",
+     "Personal Favourite"]
+
 #Receives commands directed at the bot, determines valid commands. 
 #If so, then acts on the commands
 #If not, returns back what it needs for clarification.
@@ -77,9 +84,16 @@ def handle_command(command, channel):
                     "Your job is to respond with your choice of message, as best as you can :)\n\n" + \
                     "Then, score the best response amongst players by voting with hearts. \n" + \
                     "Here are some *rules*: \n" + \
-                    " - 20 sec answers\n" + \
+                    " - 30 sec answers\n" + \
                     " - Emojis\n" + \
                     " - Short language\n" +\
+		    "Here are some additional round rules to guide voting:\n" + \
+                    " 1. Most Narritive Answer\n" + \
+                    " 2. Most Hilarious Answer\n" +\
+		    " 3. Most Inappropriate Answer\n" +\
+		    " 4. Most Accurate Answer\n" +\
+		    " 5. Most Creative Answer\n" +\
+		    " 6. Personal Favourite\n" +\
                     "Ready to go?"
 
         slackPrint(response)
@@ -107,6 +121,7 @@ def handle_command(command, channel):
         #= command next 
         #= repeat
         slackPrint(a[randint(0,len(a)-1)])
+        slackPrint(b[randint(0,len(b)-1)])
 
     elif END in command:
         slackPrint("Thanks for playing! Bye.")
