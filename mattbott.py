@@ -122,7 +122,9 @@ def handle_command(command, channel):
         #= repeat
         slackPrint(a[randint(0,len(a)-1)])
         slackPrint("Round Rule: " + b[randint(0,len(b)-1)])
-        time.sleep(30)
+        time.sleep(20)
+        slackPrint("10 seconds remaining.")
+        time.sleep(10)
         slackPrint("Please vote!")
     elif END in command:
         slackPrint("Thanks for playing! Bye.")
