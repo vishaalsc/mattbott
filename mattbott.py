@@ -51,7 +51,7 @@ a = ["Describe last night.",
             "Can I get a ride?", 
             "How was your day?"]
 
-b = ["Most Narritive Answer",
+b = ["Most Narrative Answer",
      "Most Hilarious Answer",
      "Most Inappropriate Answer",
      "Most Accurate Answer",
@@ -82,7 +82,7 @@ def handle_command(command, channel):
                     "Welcome to Emoji Blitz:\n" + \
                     "I'm going to give you a series of questions, statements, and prompts - \n" + \
                     "Your job is to respond with your choice of message, as best as you can :)\n\n" + \
-                    "Then, score the best response amongst players by voting with hearts. \n" + \
+                    "Score the best response according to the round rule amongst player, by reacting with emojis. \n" + \
                     "Here are some *rules*: \n" + \
                     " - 30 sec answers\n" + \
                     " - Emojis\n" + \
@@ -121,8 +121,9 @@ def handle_command(command, channel):
         #= command next 
         #= repeat
         slackPrint(a[randint(0,len(a)-1)])
-        slackPrint(b[randint(0,len(b)-1)])
-
+        slackPrint("Round Rule: " + b[randint(0,len(b)-1)])
+        time.sleep(30)
+        slackPrint("Please vote!")
     elif END in command:
         slackPrint("Thanks for playing! Bye.")
 
