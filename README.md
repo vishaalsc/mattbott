@@ -32,3 +32,5 @@ python mattbott.py
  - Flask
  - Slack API
  - Google Sheets API
+
+*Currently running on Heroku*
